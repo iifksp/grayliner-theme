@@ -1,0 +1,98 @@
+{{!< default}}
+
+{{> header}}
+    
+<main class="content" role="main">
+
+    <article class="{{post_class}}">
+
+        {{#post}}
+
+            <span class="post-meta">
+                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                {{tags prefix="on "}}
+                with <a href="{{url}}#disqus_thread">Comments</a>
+            </span>
+
+            <h1 class="post-title">{{{title}}}</h1>
+
+            <section class="post-content">
+                {{content}}
+            </section>
+
+            <footer class="post-footer">
+                {{#author}}
+
+					{{#if image}}
+					<figure class="author-image">
+						<A class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+					</figure>
+					{{/if}}
+
+					<section class="author">
+						<h4><a href="{{url}}">{{name}}</a></h4>
+
+						{{#if bio}}
+							<p>{{bio}}</p>
+						{{else}}
+							<p>Read <a href="{{url}}">more posts</a> by this author.</p>
+						{{/if}}
+						<div class="author-meta">
+							{{#if location}}<span class="author-location icon-location">{{location}}</span>{{/if}}
+							{{#if website}}<span class="author-link icon-link"><a href="{{website}}">{{website}}</a></span>{{/if}}
+						</div>
+					</section>
+
+				{{/author}}
+
+                <section class="share">
+                    <h4>Share this post</h4>
+                    <a href="http://service.weibo.com/share/share.php?url={{url absolute="true"}}&appkey=&title={{{title}}}&pic=&ralateUid=&language=zh_cn"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                       <i class="fa fa-weibo"></i>
+                       <span class="hidden">Google+</span>
+                    </a>
+                    <a href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                        <i class="fa fa-twitter"></i>
+                        <span class="hidden">Twitter</span>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                        onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                        <i class="fa fa-facebook"></i>
+                        <span class="hidden">Facebook</span>
+                    </a>
+                    <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+                       onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                       <i class="fa fa-google-plus"></i>
+                       <span class="hidden">Google+</span>
+                    </a>
+                    
+                </section>
+
+            </footer>
+
+        {{/post}}
+		
+		
+		{{! Inserts a devider - just for beauty ;) }}
+        <div><hr /></div>
+ 
+        {{! This is inserts disqus, post.id is the identifier }}
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            var disqus_shortname = 'SwordAir'; // required: replace example with your forum shortname
+            var disqus_identifier = '{{post.id}}';
+ 
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the comments.<br /></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </article>
+
+</main>

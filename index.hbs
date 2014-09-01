@@ -1,0 +1,28 @@
+{{!< default}}
+
+{{> header}}
+
+<main class="content" role="main">
+
+    {{#foreach posts}}
+
+    <article class="{{post_class}}">
+        <header class="post-header">
+            <span class="post-meta">
+                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+                {{tags prefix="on "}}
+                with <a href="{{url}}#disqus_thread">Comments</a>
+            </span>
+            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        </header>
+        <section class="post-excerpt">
+            {{content words="20"}}
+            <p>&hellip;<a class="read-more" rel="nofollow" href="{{url}}">Read more &raquo;</a></p>
+        </section>
+    </article>
+
+    {{/foreach}}
+
+    {{pagination}}
+
+</main>

@@ -1,0 +1,18 @@
+{{! The header on the homepage, with the site logo and description }}
+<header class="site-head">
+    <div class="site-head-content inner">
+        {{#if @blog.logo}}<a class="blog-logo" href="{{@blog.url}}"><img src="{{@blog.logo}}" alt="Blog Logo" /></a>{{/if}}
+        <div class="blog-info">
+            <h1 class="blog-title"><a href="{{@blog.url}}">{{@blog.title}}</a></h1>
+            <h2 class="blog-description">{{@blog.description}}</h2>
+        </div>
+        <nav class="site-nav" id="site-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/links/">Links</a></li>
+            <li><a href="/about/">About</a></li>
+        </nav>
+        <div class="nav-drawer" id="nav-drawer">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+</header>

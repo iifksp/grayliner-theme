@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{meta_title}}">
+    <meta name="twitter:description" content="{{meta_description}}">
+	
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{meta_title}}">
+    <meta property="og:description" content="{{meta_description}}">
+	
+	{{> custom/meta this}}
+	
+    <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <div id="wrapper">
+        
+        {{{body}}}
+
+        {{> footer}}
+        
+    </div>
+    
+{{ghost_foot}}
+
+{{> script}}
+
+</body>
+</html>

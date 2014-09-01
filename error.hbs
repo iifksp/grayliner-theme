@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {{! Document Settings }}
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>{{code}} — {{message}}</title>
+    <meta name="description" content="{{siteDescription}}">
+    <meta name="author" content="">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{> custom/meta this}}
+    
+    <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
+    <style type="text/css">
+        main{height:100%;width:100%;display:table;}
+        .error-content{text-align:center;}
+        .error-details{display:inline-block;text-align:center;margin-top:-7rem;}
+        .error-ghost{width:200px;height:200px;}
+        .error-code{font-size:5.5rem;line-height:1;margin:0;}
+        .error-description{margin-bottom:1rem;font-size:1.2rem;}
+    </style>
+</head>
+<body class="{{bodyClass}}">
+    <main role="main" id="main">
+        <section class="error-content error-404 js-error-container vertical">
+            <section class="error-details">
+                <figure class="error-image">
+                    <img class="error-ghost" src="{{@blog.logo}}"/>
+                </figure>
+                <section class="error-message">
+                    <h1 class="error-code">{{code}}</h1>
+                    <h2 class="error-description">{{message}}</h2>
+                    <a class="error-link" href="{{@blog.url}}">Go to the front page &raquo;</a>
+                </section>
+            </section>
+        </section>
+        {{#if stack}}
+        <section class="error-stack">
+            <h3>Stack Trace</h3>
+            <p><strong>{{message}}</strong></p>
+            <ul class="error-stack-list">
+            {{#each stack}}
+                <li>
+                    at
+                    {{#if function}}<em class="error-stack-function">{{function}}</em>{{/if}}
+                    <span class="error-stack-file">({{at}})</span>
+                </li>
+            {{/each}}
+            </ul>
+        </section>
+        {{/if}}
+    </main>
+</body>
+</html>
