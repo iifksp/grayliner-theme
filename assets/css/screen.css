@@ -142,16 +142,16 @@ table.plain tbody>tr:nth-child(odd)>th{background:0 0}
    ========================================================================== */
 
 .site-head{position:relative;padding:.5rem 0;display:table;width:100%;margin-bottom:2rem;text-align:center;color:#000;border-bottom:.05rem solid #e3e3e3}
-.site-nav{margin:-.53rem 0 0;float:right}
+.site-nav{float:right}
 .site-nav li{list-style:none;float:left}
-.site-nav li a{display:block;border:.05rem solid #e3e3e3;margin-left:-.05rem;padding:.2rem .7rem;text-decoration:none;font-size:.7rem}
+.site-nav li a{display:block;border-bottom:.05rem solid #e3e3e3;margin-left:-.05rem;padding:.2rem .7rem;text-decoration:none;font-size:.7rem}
 .site-nav li.current a{position:relative}
 .site-nav li.current a:before{content:' ';border:.35rem solid transparent;border-bottom-color:#e3e3e3;position:absolute;bottom:0;left:50%;margin-left:-.35rem}
 .site-nav li.current a:after{content:' ';border:.35rem solid transparent;border-bottom-color:#fff;position:absolute;bottom:-.05rem;left:50%;margin-left:-.35rem}
 .blog-logo{float:left;text-decoration:none}
 .blog-logo img{display:block;max-height:88px;width:auto;margin:0 auto;line-height:0}
 .blog-info{float:left;margin:.9rem 0 0 .9rem;text-align:left}
-.blog-title{margin:0;font-size:1.2rem;letter-spacing:-.05rem;font-weight:700;font-family:'Open Sans',sans-serif;text-shadow:0 .05rem 6px rgba(0,0,0,.1)}
+.blog-title{margin:0;font-size:1.2rem;letter-spacing:-.05rem;font-weight:700;font-family:'Noto Serif',sans-serif;text-shadow:0 .05rem 6px rgba(0,0,0,.1)}
 .blog-title a{text-decoration:none;}
 .blog-title a:hover{color:#000;}
 .blog-description{margin:0;font-size:.9rem;line-height:1.5em;font-weight:300;font-family:'Noto Serif',serif;letter-spacing:0;text-shadow:0 .05rem .15rem rgba(0,0,0,.15)}
@@ -173,6 +173,8 @@ table.plain tbody>tr:nth-child(odd)>th{background:0 0}
 .publish-date{display:block;font-size:.7rem;line-height:1.5em}
 h2.post-title{font-size:2rem;margin:0.25rem 0;}
 h1.post-title{font-size:2.5rem;margin:0.75rem 0;}
+.post hr,
+.post-content hr{margin:2.2em 0;}
 .post-excerpt a,
 .post-content a{color:#4a4a4a;text-decoration:none;border-bottom:.05rem solid #5cadff;}
 .post-excerpt a:hover,
@@ -357,7 +359,7 @@ a.read-more{color:#888;font-size:0.75rem;border:0 none;}
     .drawer-open  .site-nav{top:0;right:0;   }
     .site-nav li{float:none;}
     .site-nav li a{border-top:0;font-size:16px;border-left:.05rem solid #aaa;}
-    .nav-drawer{display:block;float:right;font-size:4.1rem;color:#666;padding:0.2rem 0.1rem 0 0.1rem;}
+    .nav-drawer{display:block;float:right;font-size:2.1rem;color:#666;padding:0.2rem 0.1rem 0 0.1rem;}
 }
 
 
@@ -434,9 +436,10 @@ a.read-more{color:#888;font-size:0.75rem;border:0 none;}
 .fa-rss:before{content:"\f09e"}
 .fa-envelope-o:before{content:"\f003";}
 .fa-dribbble:before{content:"\f17d";}
+.fa-bars:before{content:"\f0c9";}
 
 /* fix windows chrome font smoothing */
-@media screen and (-webkit-min-device-pixel-ratio:0){@font-face{font-family:FontAwesome;src:url(../fonts/fontawesome-webfont.svg?v=4.1.0#fontawesomeregular) format('svg')}}
+
 
 
 /*
