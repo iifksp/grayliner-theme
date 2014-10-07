@@ -93,7 +93,7 @@ a{color:#3079c1;transition:color ease 0.3s;}
 a:hover{color:#5CADFF;}
 h1 a,h2 a,h3 a,
 h4 a,h5 a,h6 a {color:#595757;}
-p,ul,ol,dl{margin: 1.6em 0;}
+p,ul,ol,dl{margin: 1.7em 0;}
 ol ol,ul ul,
 ul ol,ol ul{margin:0.4em 0;}
 dl dt{float:left;width:180px;overflow:hidden;clear:left;text-align:right;text-overflow:ellipsis;white-space:nowrap;font-weight:bold;margin-bottom:1em;}
@@ -159,7 +159,7 @@ table.plain tbody>tr:nth-child(odd)>th{background:0 0}
 .post:after{display:block;content:"";width:7px;height:7px;border:.05rem solid #E7EEF2;position:absolute;bottom:-5px;left:50%;margin-left:-5px;background:#fff;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;box-shadow:#fff 0 0 0 5px}
 .post-title{margin:0}
 .post-title a{text-decoration:none}
-.post-excerpt p{margin:.8rem 0 0;font-size:.9em;line-height:1.6em}
+.post-excerpt p{margin:.8rem 0 0;font-size:.9em;line-height:1.7em}
 .post-meta{display:inline-block;margin:0 0 5px;font-family:'Open Sans',sans-serif;font-size:.75rem;color:#9EABB3}
 .post-meta a{color:#9EABB3;text-decoration:none}
 .post-meta a:hover{text-decoration:underline}
