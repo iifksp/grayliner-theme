@@ -16,8 +16,9 @@
             <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
         </header>
         <section class="post-excerpt">
-            {{content words="20"}}
-            <p>&hellip;<a class="read-more" rel="nofollow" href="{{url}}">Read more &raquo;</a></p>
+			{{#if image}}<img class="post-image" src="{{image}}" alt="{{{title}}}" />{{/if}}
+            {{excerpt words="20"}} ... 
+			<div class="clear-fix"><a class="read-more" rel="nofollow" href="{{url}}">Read more &raquo;</a></div>
         </section>
     </article>
 
