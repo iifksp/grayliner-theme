@@ -79,10 +79,10 @@ td,th{padding:0}
    ========================================================================== */
 
 html{height:100%;max-height:100%;font-size:125%;}
-body{height:100%;max-height:100%;font-family:'Noto Serif',serif;font-size:1.0rem;line-height:1.6em;color:#444;}
+body{height:100%;max-height:100%;font-family:'Noto Serif', 'microsoft yahei', serif;font-size:1.0rem;line-height:1.6em;color:#444;}
 ::selection{color:#222;background:#D6EDFF;text-shadow:none;}
 h1,h2,h3,
-h4,h5,h6{text-rendering:optimizeLegibility;line-height:1;margin-top:0;font-family:'Noto Serif',sans-serif;}
+h4,h5,h6{text-rendering:optimizeLegibility;line-height:1;margin-top:0;font-family:'Noto Serif', '\5b8b\4f53', sans-serif;}
 h1{font-size:2.5rem;line-height:1.2em;letter-spacing:-.1rem;text-indent:-.15rem;}
 h2{font-size:2rem;line-height:1.2em;letter-spacing:-.05rem;text-indent:-.1rem;}
 h3{font-size:1.75rem;}
@@ -154,7 +154,7 @@ table.plain tbody>tr:nth-child(odd)>th{background:0 0}
 .blog-title{margin:0;font-size:1.2rem;letter-spacing:-.05rem;font-weight:700;font-family:'Noto Serif',sans-serif;text-shadow:0 .05rem 6px rgba(0,0,0,.1)}
 .blog-title a{text-decoration:none;}
 .blog-title a:hover{color:#000;}
-.blog-description{margin:0;font-size:.9rem;line-height:1.5em;font-weight:300;font-family:'Noto Serif',serif;letter-spacing:0;text-shadow:0 .05rem .15rem rgba(0,0,0,.15)}
+.blog-description{margin:0;font-size:.9rem;line-height:1.5em;font-weight:300;font-family:'Noto Serif', microsoft yahei, serif;letter-spacing:0;text-shadow:0 .05rem .15rem rgba(0,0,0,.15)}
 .post{position:relative;width:80%;max-width:800px;margin:2rem auto;padding-bottom:2rem;border-bottom:#EBF2F6 .05rem solid;word-break:break-word;hyphens:auto}
 .post:after{display:block;content:"";width:7px;height:7px;border:.05rem solid #E7EEF2;position:absolute;bottom:-5px;left:50%;margin-left:-5px;background:#fff;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;box-shadow:#fff 0 0 0 5px}
 .post-title{margin:0}
