@@ -79,7 +79,7 @@ td,th{padding:0}
    ========================================================================== */
 
 html{height:100%;max-height:100%;font-size:125%;}
-body{height:100%;max-height:100%;font-family:'Noto Serif', 'microsoft yahei', serif;font-size:1.0rem;line-height:1.6em;color:#444;}
+body{height:100%;max-height:100%;font-family:'Noto Serif', 'microsoft yahei', serif;font-size:0.9rem;line-height:1.7em;color:#444;}
 ::selection{color:#222;background:#D6EDFF;text-shadow:none;}
 h1,h2,h3,
 h4,h5,h6{text-rendering:optimizeLegibility;line-height:1;margin-top:0;font-family:'Noto Serif', '\5b8b\4f53', sans-serif;}
@@ -92,8 +92,8 @@ h6{font-size:1rem;}
 a{color:#3079c1;transition:color ease 0.3s;}
 a:hover{color:#5CADFF;}
 h1 a,h2 a,h3 a,
-h4 a,h5 a,h6 a {color:#595757;}
-p,ul,ol,dl{margin: 1.7em 0;}
+h4 a,h5 a,h6 a{color:#595757;}
+p,ul,ol,dl{margin:1.8em 0;}
 ol ol,ul ul,
 ul ol,ol ul{margin:0.4em 0;}
 dl dt{float:left;width:180px;overflow:hidden;clear:left;text-align:right;text-overflow:ellipsis;white-space:nowrap;font-weight:bold;margin-bottom:1em;}
@@ -141,14 +141,14 @@ table.plain tbody>tr:nth-child(odd)>th{background:0 0}
    Main styles
    ========================================================================== */
 
-.site-head{position:relative;padding:.5rem 0;display:table;width:100%;margin-bottom:2rem;text-align:center;color:#000;border-bottom:.05rem solid #e3e3e3}
-.site-nav{float:right}
-.site-nav li{list-style:none;float:left}
-.site-nav li a{display:block;border-bottom:.05rem solid #e3e3e3;margin-left:-.05rem;padding:.2rem .7rem;text-decoration:none;font-size:.7rem}
-.site-nav li.current a{position:relative}
-.site-nav li.current a:before{content:' ';border:.35rem solid transparent;border-bottom-color:#e3e3e3;position:absolute;bottom:0;left:50%;margin-left:-.35rem}
-.site-nav li.current a:after{content:' ';border:.35rem solid transparent;border-bottom-color:#fff;position:absolute;bottom:-.05rem;left:50%;margin-left:-.35rem}
-.blog-logo{float:left;text-decoration:none}
+.site-head{position:relative;display:table;width:100%;margin-bottom:2rem;text-align:center;color:#000;border-bottom:.05rem solid #ccc}
+.nav{float:right;margin:0;}
+.nav li{list-style:none;float:left}
+.nav li a{display:block;border-bottom:.05rem solid #e3e3e3;margin-left:-.05rem;padding:.2rem .7rem;text-decoration:none;font-size:.7rem}
+.nav li.nav-current a{position:relative}
+.nav li.nav-current a:before{content:' ';border:.35rem solid transparent;border-bottom-color:#e3e3e3;position:absolute;bottom:0;left:50%;margin-left:-.35rem}
+.nav li.nav-current a:after{content:' ';border:.35rem solid transparent;border-bottom-color:#fff;position:absolute;bottom:-.05rem;left:50%;margin-left:-.35rem}
+.blog-logo{float:left;text-decoration:none;position:relative;top:0.3rem;}
 .blog-logo img{display:block;max-height:88px;width:auto;margin:0 auto;line-height:0}
 .blog-info{float:left;margin:.9rem 0 0 .9rem;text-align:left}
 .blog-title{margin:0;font-size:1.2rem;letter-spacing:-.05rem;font-weight:700;font-family:'Noto Serif', '\5b8b\4f53', sans-serif;text-shadow:0 .05rem 6px rgba(0,0,0,.1)}
@@ -301,7 +301,7 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
 
 .dsq-brlink{font-size:0.7rem;}
 .nav-drawer{display:none;}
-.site-nav{transition:all ease 0.1s;}
+.nav{transition:all ease 0.1s;}
 #wrapper{transition:all ease 0.1s;width:100%;}
 
 
@@ -355,11 +355,11 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
     .newer-posts,.older-posts{position:static;margin:10px 0}
     .page-number{display:block}
     .site-footer{margin-top:3rem;font-size:.55rem}
-    .site-nav{position:fixed;top:0;right:-25.05rem;padding-top:10px;width:250px;min-height:100%;border-left:.05rem solid #aaa;}
+    .nav{position:fixed;top:0;right:-25.05rem;padding-top:10px;width:250px;min-height:100%;border-left:.05rem solid #aaa;}
     .drawer-open{ margin-left:-250px;}
-    .drawer-open  .site-nav{top:0;right:0;   }
-    .site-nav li{float:none;}
-    .site-nav li a{border-top:0;font-size:16px;border-left:.05rem solid #aaa;}
+    .drawer-open  .nav{top:0;right:0;   }
+    .nav li{float:none;}
+    .nav li a{border-top:0;font-size:16px;border-left:.05rem solid #aaa;}
     .nav-drawer{display:block;float:right;font-size:2.1rem;color:#666;padding:0.2rem 0.1rem 0 0.1rem;}
 	.post .post-image{display:block;float:none;margin:0.5rem auto;width:auto;border:0 none;padding:0;}
 }

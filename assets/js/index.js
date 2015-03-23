@@ -13,15 +13,6 @@ hljs.initHighlightingOnLoad();
         $("#nav-drawer").click(function(){
             $('#wrapper').toggleClass("drawer-open");
         })
-        
-		
-		$("#site-nav li a").each(function(){
-			console.log($(this));
-			if($(this).attr('href') == window.location.pathname){
-				$(this).parent().addClass('current');
-			}
-		})
-
     });
     
 }(jQuery));
