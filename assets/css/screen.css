@@ -142,7 +142,7 @@ table.plain tbody>tr:nth-child(odd)>th{background:0 0}
    ========================================================================== */
 
 .site-head{position:relative;display:table;width:100%;margin-bottom:2rem;text-align:center;color:#000;border-bottom:.05rem solid #ccc}
-.nav{float:right;margin:0;}
+.nav{float:right;margin:0;padding:0;}
 .nav li{list-style:none;float:left}
 .nav li a{display:block;border-bottom:.05rem solid #e3e3e3;margin-left:-.05rem;padding:.2rem .7rem;text-decoration:none;font-size:.7rem}
 .nav li.nav-current a{position:relative}
