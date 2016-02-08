@@ -23,12 +23,10 @@
     <meta property="og:title" content="{{meta_title}}">
     <meta property="og:description" content="{{meta_description}}">
 	
-	{{> custom/meta this}}
+	{{ghost_head}}
 	
     <link rel="shortcut icon" href="{{asset "/favicon.ico"}}">
     <link rel="stylesheet" type="text/css" href="{{asset "css/screen.css"}}" />
-    
-    {{ghost_head}}
 </head>
 <body class="{{body_class}}">
     <div id="wrapper">
@@ -40,8 +38,6 @@
     </div>
     
 {{ghost_foot}}
-
-{{> script}}
 
 </body>
 </html>
