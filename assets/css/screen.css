@@ -78,17 +78,17 @@ html{height:100%;max-height:100%;font-size:125%;}
 body{height:100%;max-height:100%;font-family:'Open Sans', 'microsoft yahei', serif;font-size:0.8rem;line-height:1.7em;color:#444;}
 ::selection{color:#222;background:#D6EDFF;text-shadow:none;}
 h1,h2,h3,
-h4,h5,h6{text-rendering:optimizeLegibility;line-height:1;margin-top:0;font-family:'Open Sans', '\5b8b\4f53', sans-serif;}
+h4,h5,h6{text-rendering:optimizeLegibility;line-height:1;margin-top:0;font-weight:400;}
 h1{font-size:2.5rem;line-height:1.2em;letter-spacing:-.1rem;text-indent:-.15rem;}
 h2{font-size:1.6rem;line-height:1.2em;letter-spacing:-.05rem;text-indent:-.1rem;}
 h3{font-size:1.3rem;}
 h4{font-size:1.1rem;}
 h5{font-size:1rem;}
 h6{font-size:1rem;}
-a{color:#3079c1;transition:color ease 0.3s;}
+a{color:#3079C1;transition:color ease 0.3s;}
 a:hover{color:#5CADFF;}
 h1 a,h2 a,h3 a,
-h4 a,h5 a,h6 a{color:#595757;}
+h4 a,h5 a,h6 a{color:#3079C1;}
 p,ul,ol,dl{margin:1.8em 0;}
 ol ol,ul ul,
 ul ol,ol ul{margin:0.4em 0;}
@@ -137,28 +137,28 @@ table.plain tbody>tr:nth-child(odd)>th{background:0 0}
    Main styles
    ========================================================================== */
 
-.site-head{position:relative;display:table;width:100%;margin-bottom:2rem;text-align:center;color:#000;border-bottom:.05rem solid #ccc}
-.nav{float:right;margin:0;padding:0;}
+.site-head{background:#fff;position:relative;display:table;width:100%;margin-bottom:3rem;text-align:center;color:#000;border-bottom:.05rem solid #bbb;}
+.nav{float:right;margin:0;padding:0;margin-top:0.3rem;margin-bottom:-0.05rem;}
 .nav li{list-style:none;float:left}
-.nav li a{display:block;border-bottom:.05rem solid #ddd;margin-left:-.05rem;padding:.2rem .7rem;text-decoration:none;font-size:.7rem}
-.nav li.nav-current a{position:relative}
-.nav li.nav-current a:before{content:' ';border:.25rem solid transparent;border-bottom-color:#ddd;position:absolute;bottom:0;left:50%;margin-left:-.35rem}
-.nav li.nav-current a:after{content:' ';border:.25rem solid transparent;border-bottom-color:#fff;position:absolute;bottom:-.05rem;left:50%;margin-left:-.35rem}
-.blog-logo{float:left;text-decoration:none;position:relative;top:0.3rem;}
+.nav li a{display:block;margin-left:-.05rem;padding:.3rem 0.2rem .1rem 0.2rem;text-decoration:none;font-size:.7rem;margin-left:1rem;}
+.nav li a:hover{border-bottom:1px solid #3079C1;}
+.nav li.nav-current a{border-bottom:1px solid #d1d1d1;}
+.nav li.nav-current a:hover{cursor:default;color:#3a87c7;}
+.blog-logo{float:left;text-decoration:none;position:relative;}
 .blog-logo img{display:block;max-height:88px;width:auto;margin:0 auto;line-height:0}
-.blog-info{float:left;margin:.9rem 0 0 .9rem;text-align:left}
-.blog-title{margin:0;font-size:1.2rem;letter-spacing:-.05rem;font-weight:700;font-family:'Open Sans', '\5b8b\4f53', sans-serif;text-shadow:0 .05rem 6px rgba(0,0,0,.1)}
-.blog-title a{text-decoration:none;}
-.blog-title a:hover{color:#000;}
-.blog-description{margin:0;font-size:1rem;line-height:1.5em;font-weight:300;font-family:'Open Sans', microsoft yahei, serif;letter-spacing:0;text-shadow:0 .05rem .15rem rgba(0,0,0,.15)}
+.blog-info{float:left;margin:0.75rem 0 0 1.1rem;text-align:left}
+.blog-title{margin:0;font-size:1.5rem;letter-spacing:-.05rem;font-weight:400;}
+.blog-title a{text-decoration:none;color:#333;}
+.blog-description{margin:0;font-size:0.75rem;line-height:1.5em;font-weight:400;font-family:'Open Sans', microsoft yahei, serif;letter-spacing:0;}
 .post{position:relative;width:80%;max-width:800px;margin:2rem auto;padding-bottom:2rem;border-bottom:#EBF2F6 .05rem solid;word-break:break-word;hyphens:auto}
 .post:after{display:block;content:"";width:7px;height:7px;border:.05rem solid #ddd;position:absolute;bottom:-5px;left:50%;margin-left:-5px;background:#fff;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;box-shadow:#fff 0 0 0 5px}
-.post-title{margin:0}
+.post-title{margin:0;font-weight:400;}
 .post-title a{text-decoration:none}
 .post-excerpt{line-height:1.8em;}
 .post-excerpt p{margin:.8rem 0 0;font-size:1em;line-height:1.7em}
-.post-meta{display:inline-block;margin:0 0 5px;font-family:'Open Sans',sans-serif;font-size:.75rem;color:#9EABB3}
-.post-meta a{color:#9EABB3;text-decoration:none}
+.post-excerpt .more-box{clear:both;}
+.post-meta{display:inline-block;margin:0 0 5px;font-family:'Open Sans',sans-serif;font-size:.75rem;color:#999999}
+.post-meta a{color:#999999;text-decoration:none}
 .post-meta a:hover{text-decoration:underline}
 .post .post-image{float:right;margin:0.5rem 0 0.5rem 1.1rem;width:45%;border:0.05rem solid #ddd;padding:0.25rem;border-radius:0.15rem;background:#f9f9f9;}
 .user-meta{position:relative;padding:.15rem 40px 0 100px;min-height:77px}
@@ -168,8 +168,8 @@ table.plain tbody>tr:nth-child(odd)>th{background:0 0}
 .publish-meta{position:absolute;top:0;right:0;padding:2.15rem 0 2rem;text-align:right}
 .publish-heading{display:block;font-weight:700}
 .publish-date{display:block;font-size:.7rem;line-height:1.5em}
-h2.post-title{font-size:1.6rem;margin:0.25rem 0 0.75rem 0;}
-h1.post-title{font-size:2rem;margin:0.75rem 0;}
+h2.post-title{font-size:1.6rem;margin:0.25rem 0 0.85rem 0;}
+h1.post-title{font-size:2rem;margin:0.5rem 0 0.75rem 0;}
 .post hr,
 .post-content hr{margin:2.2em 0;}
 .post-excerpt a,
@@ -230,7 +230,7 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
    Footer
    ========================================================================== */
 
-.site-footer{position:relative;margin:4rem 0 0;padding:1.25rem 0;border-top:#EBF2F6 .05rem solid;font-family:'Open Sans',sans-serif;font-size:.6rem;line-height:1.7em;color:#999;text-align:center}
+.site-footer{position:relative;margin:4rem 0 0;padding:1.25rem 0;border-top:#ccc .05rem solid;font-family:'Open Sans',sans-serif;font-size:.6rem;line-height:1.7em;color:#999;text-align:center}
 .site-footer a{color:#999;text-decoration:underline}
 .site-footer a:hover{color:#555}
 .poweredby .icon-ghost{font-weight:700;text-decoration:none}
@@ -238,7 +238,7 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
 .poweredby .icon-ghost:before{font-size:.5rem;margin-right:.2em}
 .branding{margin-top:10px;}
 .branding img{margin:0 5px;}
-.subscribe{width:28px;height:28px;position:absolute;top:-14px;left:50%;margin-left:-15px;border:.05rem solid #EBF2F6;text-align:center;line-height:1.2rem;border-radius:50px;background:#fff;transition:box-shadow .5s}
+.subscribe{width:28px;height:28px;position:absolute;top:-14px;left:50%;margin-left:-15px;border:.05rem solid #ccc;text-align:center;line-height:1.2rem;border-radius:50px;background:#fff;transition:box-shadow .5s}
 .subscribe .fa-rss{color:#f60;font-size:18px;line-height:1.4rem;text-indent:.1rem}
 .subscribe:hover{box-shadow:rgba(255,102,0,.6) 0 0 0 5px;transition:box-shadow .25s;border-color:#f60}
 .tooltip{opacity:0;display:inline-block;padding:4px 8px 5px;position:absolute;top:-1.15rem;left:-1.2rem;color:rgba(255,255,255,.9);font-size:.65rem;line-height:1em;text-align:center;background:#50585D;border-radius:20px;box-shadow:0 .05rem 4px rgba(0,0,0,.1);transition:opacity .3s ease,top .3s ease}
@@ -336,7 +336,7 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
     .post {width:auto;margin-left:16px;margin-right:16px;font-size:0.8em;line-height:1.6em;}
     .blog-title{font-size:0.85rem;}
     .blog-description{font-size:0.65rem;}
-    .blog-info{margin-top:0.5rem}
+    .blog-info{margin-top:0.4rem;}
     h1{font-size:1.5rem;line-height:1.1em;letter-spacing:-.05rem;}
     h1.post-title{font-size:1.5rem;}
     h2{font-size:1.3rem;}
@@ -357,7 +357,7 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
     .drawer-open{ margin-left:-250px;}
     .drawer-open  .nav{top:0;right:0;   }
     .nav li{float:none;}
-    .nav li a{border-top:0;font-size:16px;border-left:.05rem solid #aaa;}
+    .nav li a{border-top:0;font-size:16px;border-left:.05rem solid #aaa;margin-left:0;}
     .nav-drawer{display:block;float:right;font-size:2.1rem;color:#666;padding:0.2rem 0.1rem 0 0.1rem;}
 	.post .post-image{display:block;float:none;margin:0.5rem auto;width:auto;border:0 none;padding:0;}
 }
@@ -443,7 +443,7 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
 
 
 #disqus_thread #dsq-content {}
-
+.discovery-post a.title, .discovery-post h3{font-weight:400px !important;}
 
 
 
