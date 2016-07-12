@@ -79,8 +79,8 @@ body{height:100%;max-height:100%;font-family:'Open Sans', 'microsoft yahei', ser
 ::selection{color:#222;background:#D6EDFF;text-shadow:none;}
 h1,h2,h3,
 h4,h5,h6{text-rendering:optimizeLegibility;line-height:1;margin-top:0;font-weight:400;}
-h1{font-size:2.5rem;line-height:1.2em;letter-spacing:-.1rem;text-indent:-.15rem;}
-h2{font-size:1.6rem;line-height:1.2em;letter-spacing:-.05rem;text-indent:-.1rem;}
+h1{font-size:2.5rem;line-height:1.2em;}
+h2{font-size:1.6rem;line-height:1.2em;}
 h3{font-size:1.3rem;}
 h4{font-size:1.1rem;}
 h5{font-size:1rem;}
@@ -137,20 +137,21 @@ table.plain tbody>tr:nth-child(odd)>th{background:0 0}
    Main styles
    ========================================================================== */
 
-.site-head{background:#fff;position:relative;display:table;width:100%;margin-bottom:3rem;text-align:center;color:#000;border-bottom:.05rem solid #bbb;}
+.site-head{transition:height 0.2s;height:87px;background:#fff;z-index:3;position:fixed;display:table;width:100%;margin-bottom:3rem;text-align:center;color:#000;border-bottom:.05rem solid #bbb;}
 .nav{float:right;margin:0;padding:0;margin-top:0.3rem;margin-bottom:-0.05rem;}
 .nav li{list-style:none;float:left}
-.nav li a{display:block;margin-left:-.05rem;padding:.3rem 0.2rem .1rem 0.2rem;text-decoration:none;font-size:.7rem;margin-left:1rem;}
+.nav li a{display:block;margin-left:-.05rem;padding:.3rem 0.2rem .1rem 0.2rem;text-decoration:none;font-size:.7rem;margin-left:1rem;transition:all 0.2s;}
 .nav li a:hover{border-bottom:1px solid #3079C1;}
 .nav li.nav-current a{border-bottom:1px solid #d1d1d1;}
 .nav li.nav-current a:hover{cursor:default;color:#3a87c7;}
 .blog-logo{float:left;text-decoration:none;position:relative;}
-.blog-logo img{display:block;max-height:88px;width:auto;margin:0 auto;line-height:0}
-.blog-info{float:left;margin:0.75rem 0 0 1.1rem;text-align:left}
-.blog-title{margin:0;font-size:1.5rem;letter-spacing:-.05rem;font-weight:400;}
+.blog-logo img{display:block;width:87px;height:87px;margin:0 auto;line-height:0;transition:all 0.2s;}
+.blog-info{float:left;margin:0.9rem 0 0 1.1rem;text-align:left}
+.blog-title{margin:0;font-size:1.5rem;font-weight:400;line-height:1.1;transition:all 0.2s;}
 .blog-title a{text-decoration:none;color:#333;}
-.blog-description{margin:0;font-size:0.75rem;line-height:1.5em;font-weight:400;font-family:'Open Sans', microsoft yahei, serif;letter-spacing:0;}
-.post{position:relative;width:80%;max-width:800px;margin:2rem auto;padding-bottom:2rem;border-bottom:#EBF2F6 .05rem solid;word-break:break-word;hyphens:auto}
+.blog-description{margin:0;font-size:0.75rem;line-height:1.5em;font-weight:400;font-family:'Open Sans', microsoft yahei, serif;letter-spacing:0;transition:all 0.2s;}
+.content{padding-top:140px;}
+.post{position:relative;width:80%;max-width:800px;margin:0 auto 2rem auto;padding-bottom:2rem;border-bottom:#EBF2F6 .05rem solid;word-break:break-word;hyphens:auto}
 .post:after{display:block;content:"";width:7px;height:7px;border:.05rem solid #ddd;position:absolute;bottom:-5px;left:50%;margin-left:-5px;background:#fff;-webkit-border-radius:100%;-moz-border-radius:100%;border-radius:100%;box-shadow:#fff 0 0 0 5px}
 .post-title{margin:0;font-weight:400;}
 .post-title a{text-decoration:none}
@@ -169,7 +170,7 @@ table.plain tbody>tr:nth-child(odd)>th{background:0 0}
 .publish-heading{display:block;font-weight:700}
 .publish-date{display:block;font-size:.7rem;line-height:1.5em}
 h2.post-title{font-size:1.6rem;margin:0.25rem 0 0.85rem 0;}
-h1.post-title{font-size:2rem;margin:0.5rem 0 0.75rem 0;}
+h1.post-title{font-size:2rem;margin:0 0 0.75rem 0;}
 .post hr,
 .post-content hr{margin:2.2em 0;}
 .post-excerpt a,
@@ -177,6 +178,15 @@ h1.post-title{font-size:2rem;margin:0.5rem 0 0.75rem 0;}
 .post-excerpt a:hover,
 .post-content a:hover{color:#000;border-color:#3079c1;}
 a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
+
+.site-head-fixed{background-color:#f8f8f8;height:47px;box-shadow:0 3px 3px rgba(0,0,0,0.1);transition:height 0.2s;}
+.site-head-fixed .blog-logo img{height:47px;width:47px;transition:height 0.2s;}
+.site-head-fixed .blog-title{font-size:18px;line-height:1;transition:all 0.2s;}
+.site-head-fixed .blog-description{display:none;}
+.site-head-fixed .blog-info{margin-top:0.8rem;margin-left:0.7rem;transition:all 0.2s;}
+.site-head-fixed .nav li a{padding-bottom:0.3rem;transition:all 0.2s;}
+.site-head-fixed .nav li a:hover{border-bottom-width:3px;transition:none;}
+.site-head-fixed .nav li.nav-current a{border-bottom-width:3px;border-color:#bbb;}
 
 
 /* ==========================================================================
@@ -330,13 +340,15 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
    ========================================================================== */
    
 @media only screen and (max-width: 500px) {
-    .blog-logo img{max-height:50px;}
+	.site-head{height:47px;}
+	.content{padding-top:80px;}
+    .blog-logo img{width:47px;height:47px;}
     .inner,
     .pagination{width:auto;margin-left:16px;margin-right:16px;}
     .post {width:auto;margin-left:16px;margin-right:16px;font-size:0.8em;line-height:1.6em;}
-    .blog-title{font-size:0.85rem;}
-    .blog-description{font-size:0.65rem;}
-    .blog-info{margin-top:0.4rem;}
+    .blog-title{font-size:18px;line-height:1;}
+    .blog-description{font-size:12px;}
+    .blog-info{margin-top:0.35rem;margin-left:0.7rem;}
     h1{font-size:1.5rem;line-height:1.1em;letter-spacing:-.05rem;}
     h1.post-title{font-size:1.5rem;}
     h2{font-size:1.3rem;}
@@ -353,11 +365,11 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
     .newer-posts,.older-posts{position:static;margin:10px 0}
     .page-number{display:block}
     .site-footer{margin-top:3rem;font-size:.55rem}
-    .nav{position:fixed;top:0;right:-25.05rem;padding-top:10px;width:250px;min-height:100%;border-left:.05rem solid #aaa;}
+    .nav{position:fixed;top:0;right:-25.05rem;padding-top:9px;width:250px;min-height:100%;border-left:.05rem solid #aaa;}
     .drawer-open{ margin-left:-250px;}
     .drawer-open  .nav{top:0;right:0;   }
     .nav li{float:none;}
-    .nav li a{border-top:0;font-size:16px;border-left:.05rem solid #aaa;margin-left:0;}
+    .nav li a{border-top:0;font-size:16px;margin-left:0;}
     .nav-drawer{display:block;float:right;font-size:2.1rem;color:#666;padding:0.2rem 0.1rem 0 0.1rem;}
 	.post .post-image{display:block;float:none;margin:0.5rem auto;width:auto;border:0 none;padding:0;}
 }
