@@ -9,9 +9,9 @@
         {{#post}}
 
             <span class="post-meta">
-                <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
-                {{tags prefix="on "}}
-                with <a href="{{url}}#disqus_thread">Comments</a>
+                <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}"><i class="fa fa-calendar-o" aria-hidden="true"></i>{{date format="YYYY-MM-DD"}}</time>
+                <span class="post-tags"><i class="fa fa-tag" aria-hidden="true"></i>{{tags}}</span>
+				<span class="post-Comments"><i class="fa fa-comment" aria-hidden="true"></i><a href="{{url}}#disqus_thread">Comments</a></span>
             </span>
 
             <h1 class="post-title">{{{title}}}</h1>
