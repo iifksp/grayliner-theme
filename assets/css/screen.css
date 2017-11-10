@@ -173,7 +173,7 @@ table.plain tbody>tr:nth-child(odd)>th{background:0 0}
 .publish-heading{display:block;font-weight:700}
 .publish-date{display:block;font-size:.7rem;line-height:1.5em}
 h2.post-title{font-size:1.6rem;margin:0.25rem 0 0.85rem 0;}
-h1.post-title{font-size:2rem;margin:0 0 0.75rem 0;}
+h1.post-title{font-size:2rem;margin:0.2rem 0 0.75rem 0;}
 .post hr,
 .post-content hr{margin:2.2em 0;}
 .post-excerpt a,
@@ -304,7 +304,6 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
 .author-profile .author-meta{margin:2rem 0;font-family:"Open Sans",serif;font-size:1.7rem}
 .author-meta span{display:inline-block;word-wrap:break-word}
 .author-meta a{text-decoration:none}
-.archive-template .author-profile .author-meta{display:none}
 .subscribe-button{position:absolute;right:0;top:0;text-decoration:none;}
 .subscribe-button:before{margin-right:0.5rem;}
 
@@ -352,7 +351,7 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
     .blog-logo img{width:47px;height:47px;}
     .inner,
     .pagination{width:auto;margin-left:16px;margin-right:16px;}
-    .post {width:auto;margin-left:16px;margin-right:16px;font-size:0.8em;line-height:1.6em;}
+    .post {width:auto;margin-left:16px;margin-right:16px;font-size:0.9em;line-height:1.6em;}
     .blog-title{font-size:18px;line-height:1;}
     .blog-description{font-size:12px;}
     .blog-info{margin-top:0.35rem;margin-left:0.7rem;}
@@ -487,6 +486,7 @@ a.read-more{float:right;font-size:0.75rem;line-height:1.6em;}
 	.archive-post-list{margin-left:0;}
 }
 
+.disqus-loading-tips{font-size:12px;color:#999;}
 
 /*
  *

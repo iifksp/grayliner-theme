@@ -1,4 +1,6 @@
 {
+  "author": {"email": "iifksp@swordair.com"},
+  "config": { "posts_per_page": 8},
   "name": "grayliner",
   "version": "0.1.3"
 }

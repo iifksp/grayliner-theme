@@ -23,9 +23,9 @@
             <footer class="post-footer">
                 {{#author}}
 
-					{{#if image}}
+					{{#if profile_image}}
 					<figure class="author-image">
-						<A class="img" href="{{url}}" style="background-image: url({{image}})"><span class="hidden">{{name}}'s Picture</span></a>
+						<A class="img" href="{{url}}" style="background-image: url({{profile_image}})"><span class="hidden">{{name}}'s Picture</span></a>
 					</figure>
 					{{/if}}
 
@@ -79,7 +79,10 @@
         <div><hr /></div>
  
         {{! This is inserts disqus, post.id is the identifier }}
-        <div id="disqus_thread"></div>
+        <div id="disqus_thread">
+			<p>评论加载中...</p>
+			<p class="disqus-loading-tips">由<span class="logo-disqus">Disqus</span>提供评论支持，如果评论长时间未加载，请飞跃长城。</p>
+		</div>
         <script type="text/javascript">
             var disqus_shortname = 'SwordAir'; // required: replace example with your forum shortname
             var disqus_identifier = '{{post.id}}';
@@ -92,7 +95,7 @@
             })();
         </script>
         <noscript>Please enable JavaScript to view the comments.<br /></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+        
     </article>
 
 </main>
