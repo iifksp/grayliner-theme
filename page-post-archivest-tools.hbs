@@ -1,0 +1,22 @@
+{{!< default}}
+
+{{> header}}
+
+<main class="content" role="main">
+    <article class="{{post_class}}">
+		
+		
+		
+        {{#get "posts" limit="all"}}
+			<ul>
+		
+			{{! Loop through our posts collection }}
+			{{#foreach posts}}
+				<li><a href="{{url}}">{{title}}</a><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="YYYY-MM-DD"}}</time></li>
+			{{/foreach}}
+			
+			</ul>
+		{{/get}}
+        
+    </article>
+</main>
